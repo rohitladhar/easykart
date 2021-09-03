@@ -1,0 +1,18 @@
+@import "navbar.scss";
+@import "slider.scss";
+@import "fouritems.scss";
+@import "colors.scss";
+@import "slideritems.scss";
+@import "footer.scss";
+@import "products.scss";
+@import "threeproducts.scss";
+@import "product.scss";
+@import "cart.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  text-decoration: none;
+  background-color: $grey;
+}

@@ -1,0 +1,56 @@
+@import "colors.scss";
+%property-four {
+  display: flex;
+  position: absolute;
+  top: 975px;
+  opacity: 0.2;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+.slideritems--container {
+  height: 45vh;
+  background-color: white;
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  &--one {
+    &--header {
+      h2 {
+        font-weight: bolder;
+        padding-left: 50px;
+        padding-top: 15px;
+        background-color: white;
+      }
+      h2 span {
+        background-color: white;
+      }
+    }
+  }
+  &--two {
+    &--left {
+      @extend %property-four;
+      left: 25px;
+    }
+    &--middle {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      &--inner {
+        background-color: white;
+        &--li {
+          list-style: none;
+          background: white;
+          text-align: center;
+        }
+      }
+    }
+
+    &--right {
+      @extend %property-four;
+      right: 25px;
+    }
+  }
+}

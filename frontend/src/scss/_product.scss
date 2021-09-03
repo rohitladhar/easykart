@@ -1,0 +1,91 @@
+@import "colors.scss";
+%property-five {
+  max-width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  padding: 5px 0px;
+  color: white;
+  font-size: 1rem;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.product--container {
+  width: 95%;
+  height: 90vh;
+  margin: 20px 25px;
+  background-color: white;
+  &--inner {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+
+    &--photo {
+      width: 60%;
+      background-color: white;
+      overflow: hidden;
+      margin: 20px 0px 0px 20px;
+    }
+    &--info {
+      width: 20%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 100px 0px;
+
+      &--name {
+        font-size: 1.3rem;
+      }
+      &--price {
+        color: red;
+      }
+      &--company {
+        font-size: 1.1rem;
+      }
+      ul {
+        font-size: 1.1rem;
+        background-color: white;
+        li {
+          list-style: none;
+          background-color: white;
+          margin: 15px 0px;
+        }
+      }
+    }
+    &--cart {
+      width: 20%;
+      height: 30vh;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      margin: 100px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px 10px;
+      text-align: center;
+      h3 {
+        background-color: white;
+        margin: 10px 0px;
+      }
+      button {
+        margin: 10px 10px;
+        cursor: pointer;
+      }
+      &--addtocart {
+        @extend %property-five;
+        background-color: $lime;
+      }
+      &--buynow {
+        @extend %property-five;
+        background-color: $darkOrange;
+        &--link {
+          background-color: $darkOrange;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "colors.scss";
+
+.fouritems--container {
+  height: 72vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  &--item {
+    width: 25%;
+    margin: 25px 15px;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 2px 2px 2px #ccc;
+
+    h2 {
+      margin: 10px;
+      font-weight: bolder;
+      background-color: white;
+    }
+    &--items {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: white;
+      margin: 0px 15px;
+      &--inner {
+        margin: 5px;
+        background-color: white;
+        &--li {
+          list-style-type: none;
+          background-color: white;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

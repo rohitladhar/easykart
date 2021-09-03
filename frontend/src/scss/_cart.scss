@@ -1,0 +1,207 @@
+@import "colors.scss";
+
+%property-six {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart--container--empty {
+  display: flex;
+  top: 25%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  margin-top: 30px;
+  height: 70vh;
+  &--image {
+    background-color: white;
+  }
+  &--two {
+    display: flex;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    &--heading {
+      font-family: 700;
+      font-size: 1.3rem;
+      h2 {
+        background-color: white;
+      }
+    }
+
+    &--btn {
+      width: 160px;
+      height: 40px;
+      background-color: $lime;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      &--link {
+        background-color: $lime;
+        color: white;
+        font-size: 1rem;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.cart--container {
+  @extend %property-six;
+  justify-content: space-evenly;
+  margin: 25px 10px;
+  width: 96%;
+  &--left {
+    background-color: white;
+    width: 75%;
+    &--header {
+      background-color: white;
+      margin: 25px 15px 5px 15px;
+      @extend %property-six;
+      justify-content: space-between;
+      &--title {
+        background-color: white;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      &--price {
+        background-color: white;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+    &--main {
+      margin: 25px 15px 25px 0px;
+      @extend %property-six;
+      width: 100%;
+      background-color: white;
+      &--image {
+        padding-left: 10px;
+        width: 25%;
+        background-color: white;
+      }
+      &--detail {
+        width: 60%;
+        background-color: rgb(255, 255, 255);
+
+        &--ul {
+          background-color: white;
+          list-style: none;
+          padding-top: 10px;
+          height: 22vh;
+          &--name {
+            background-color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+          &--brand {
+            background-color: white;
+            color: $lime;
+            font-size: 1.2rem;
+          }
+          &--category {
+            background-color: white;
+            font-size: 1.1rem;
+            color: $darkOrange;
+          }
+        }
+        &--bottom {
+          @extend %property-six;
+          background-color: rgb(255, 255, 255);
+          margin-bottom: 10px;
+          &--select {
+            margin-right: 20px;
+          }
+          &--qty {
+            margin-right: 20px;
+            background-color: rgb(255, 255, 255);
+          }
+          &--delete {
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            &--btn {
+              font-size: 1rem;
+              outline: none;
+              border: none;
+              margin: auto;
+              cursor: pointer;
+              color: $red;
+              background-color: white;
+            }
+          }
+        }
+      }
+      &--price {
+        width: 20%;
+        padding-right: 15px;
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+        color: red;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+    }
+    &--footer {
+      margin: 25px 15px 25px 15px;
+      background-color: white;
+      display: flex;
+      font-size: 1.3rem;
+      font-weight: 700;
+      justify-content: flex-end;
+      padding-right: 15px;
+    }
+  }
+  &--right {
+    background-color: white;
+    width: 20%;
+    padding: 30px 10px;
+    height: 30vh;
+    &--delivery {
+      color: $green;
+      background-color: white;
+      font-size: 0.8rem;
+    }
+    &--subtotal {
+      background-color: white;
+      display: flex;
+      height: 10vh;
+      justify-content: center;
+      align-items: center;
+    }
+    &--btn {
+      background-color: white;
+
+      &--button {
+        display: flex;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        margin: auto;
+        height: 40px;
+        width: 220px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: $lime;
+        border-radius: 10px;
+        &--link {
+          background-color: $lime;
+          color: white;
+        }
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
